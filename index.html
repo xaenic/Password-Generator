@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <meta name="theme-color" content="#0000" />
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <span class="username">smoky</span>
+      </header>
+      <section class="main-content">
+        <div class="card">
+          <div class="gen-password">
+            <input type="text" class="password" disabled />
+            <button class="btn" id="copy" onclick="copy()">
+              Copy Password
+            </button>
+          </div>
+          <div class="customization">
+            <h1>
+              Generate a <br />
+              <span>random password</span>
+            </h1>
+            <small>Never use an insecure password again</small>
+
+            <div class="options">
+                <h3>Customize your password</h3>
+                <div class="group">
+                    <small>Length (<span id="ltext"> 16 </span>)</small>
+                    <input type="range" name="" value="16" id="length" oninput="generate()"min="0" max="100"/>
+                </div>
+                <div class="contains">
+                    <div class="form-group">
+                        <input type="checkbox" id="letters"class="checkbox" checked="true" oninput="check()">
+                        <label for="letters">Letters (e.g. Aa)</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="numbers"class="checkbox" checked="true" oninput="check()">
+                        <label for="numbers">Numbers (e.g. 12345)</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="symbols"class="checkbox" checked="true" oninput="check()">
+                        <label for="symbols">Symbols (e.g. !@#$%^&*)</label>
+                    </div>
+                    <button class="btn" onclick="generate()">Generate Password</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="test.js"></script>
+  </body>
+</html>
